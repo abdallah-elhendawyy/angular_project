@@ -1,0 +1,37 @@
+<div *ngIf="product" class="product-container">
+    <div class="product-image">
+      <img [src]="product.images[0]" alt="{{ product.title }}" class="img-fluid">
+    </div>
+    <div class="product-details">
+      <h1>{{ product.title }}</h1>
+      <p>{{ product.description }}</p>
+      <div class="rating">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <span *ngIf="star <= product.rating" class="filled-star">&#9733;</span>
+          <span *ngIf="star > product.rating" class="empty-star">&#9734;</span>
+        </ng-container>
+      </div>
+      <div class="price">
+        <p>{{ product.price }}</p>
+      </div>
+      <div class="stock-status" [ngClass]="{ 'in-stock': product.inStock, 'out-of-stock': !product.inStock }">
+        <p *ngIf="product.inStock">In stock</p>
+        <p *ngIf="!product.inStock">Out of stock</p>
+        <p *ngIf="product.inStock && product.stockLeft <= 12" class="low-stock">Only {{ product.stockLeft }} items left! Don't miss it</p>
+      </div>
+      <div class="actions">
+        <button  class="buy-now-btn">Buy Now</button>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="additional-info">
+        <button class="info-btn">More Information</button>
+        <button class="info-btn">Category</button>
+        <button class="info-btn">Brand</button>
+      </div>
+    </div>
+    
+  </div>
+  <div *ngIf="!product">
+    <p>Product not found.</p>
+  </div>
+  

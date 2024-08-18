@@ -1,0 +1,98 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-image {
+    flex: 1 1 300px;
+  }
+  
+  .product-details {
+    flex: 2 1 400px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .filled-star {
+    color: #f5a623;
+  }
+  
+  .empty-star {
+    color: #ccc;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .financing {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .stock-status {
+    margin-top: 10px;
+  }
+  
+  .stock-status.in-stock {
+    color: green;
+  }
+  
+  .stock-status.out-of-stock {
+    color: red;
+  }
+  
+  .low-stock {
+    color: orange;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .buy-now-btn, .add-to-cart-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buy-now-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #ddd;
+  }
+  
+  .additional-info {
+    margin-top: 20px;
+  }
+  
+  .info-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .color-options img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
